@@ -1,0 +1,373 @@
+
+{% block sidebar %}
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+            <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="{{url_for('static' ,filename='images/logo-sm.png')}}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{{url_for('static' ,filename='images/logo-dark.png')}}" alt="" height="17">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="{{url_for('static' ,filename='images/logo-sm.png')}}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{{url_for('static' ,filename='images/logo-light.png')}}" alt="" height="17">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+                    
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarDashboards">
+                                <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Dashboards</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarDashboards">
+                                <ul class="nav nav-sm flex-column">
+                                    
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link" data-key="t-ecommerce"> Ecommerce </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarApps" data-bs-toggle="collapse"
+                                role="button" aria-expanded="false" aria-controls="sidebarApps">
+                                <i class="ri-apps-2-line"></i> <span data-key="t-apps">Apps</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarApps">
+                                <ul class="nav nav-sm flex-column">
+                                    
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarEcommerce" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarEcommerce" data-key="t-ecommerce"> Ecommerce
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarEcommerce">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/products" class="nav-link" data-key="t-products"> Products </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/product_details" class="nav-link" data-key="t-product-Details"> Product Details </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/add_product" class="nav-link" data-key="t-create-product"> Create Product </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/orders" class="nav-link" data-key="t-orders"> Orders </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/order_details" class="nav-link" data-key="t-order-details"> Order Details </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/customer" class="nav-link" data-key="t-customers"> Customers </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/cart" class="nav-link" data-key="t-shopping-cart"> Shopping Cart </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/checkout" class="nav-link" data-key="t-checkout"> Checkout </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/sellers" class="nav-link" data-key="t-sellers"> Sellers </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/ecommerce/seller_details" class="nav-link" data-key="t-sellers-details"> Seller Details </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                
+                                    <li class="nav-item">
+                                        <a href="/apps/api_key" class="nav-link"> <span data-key="t-api-key">API Key</span> <span class="badge badge-pill bg-success" data-key="t-new">New</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarLayouts">
+                                <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Layouts</span><span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarLayouts">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="/layouts/horizontal" target="_blank" class="nav-link" data-key="t-horizontal">Horizontal</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/layouts/two_column" target="_blank" class="nav-link" data-key="t-two-column">Two Column</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/layouts/vertical" target="_blank" class="nav-link" data-key="t-vertical">Vertical</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+
+                        <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-pages">Pages</span></li>
+
+                    <!--<li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarAuth" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarAuth">
+                                <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Authentication</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarAuth">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#sidebarSignIn" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarSignIn" data-key="t-signin"> Sign In
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarSignIn">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-signin-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-signin-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarSignUp" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarSignUp" data-key="t-signup"> Sign Up
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarSignUp">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-signup-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-signup-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#sidebarResetPass" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarResetPass" data-key="t-password-reset"> Password Reset
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarResetPass">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-pass-reset-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-pass-reset-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#sidebarchangePass" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                                        aria-controls="sidebarchangePass" data-key="t-password-create">
+                                        Password Create
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarchangePass">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-pass-change-basic" class="nav-link" data-key="t-basic">
+                                                        Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-pass-change-cover" class="nav-link" data-key="t-cover">
+                                                        Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    
+                                <li class="nav-item">
+                                        <a href="#sidebarLockScreen" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarLockScreen" data-key="t-lock-screen"> Lock Screen
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarLockScreen">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-lockscreen-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-lockscreen-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#sidebarLogout" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarLogout" data-key="t-logout"> Logout
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarLogout">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-logout-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-logout-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarSuccessMsg" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarSuccessMsg" data-key="t-success-message"> Success Message
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarSuccessMsg">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-success-msg-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-success-msg-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarTwoStep" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarTwoStep" data-key="t-two-step-verification"> Two Step Verification
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarTwoStep">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-twostep-basic" class="nav-link" data-key="t-basic"> Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-twostep-cover" class="nav-link" data-key="t-cover"> Cover </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#sidebarErrors" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarErrors" data-key="t-errors"> Errors
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarErrors">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-404-basic" class="nav-link" data-key="t-404-basic"> 404 Basic </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-404-cover" class="nav-link" data-key="t-404-cover"> 404 Cover </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-404-alt" class="nav-link" data-key="t-404-alt"> 404 Alt </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-500" class="nav-link" data-key="t-500"> 500 </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/authentication/auth-offline" class="nav-link" data-key="t-offline-page"> Offline Page </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>-->
+                        
+                        <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-components">Components</span></li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarCharts" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarCharts">
+                                <i class="ri-pie-chart-line"></i> <span data-key="t-charts">Charts</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarCharts">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="#sidebarApexcharts" class="nav-link" data-bs-toggle="collapse" role="button"
+                                            aria-expanded="false" aria-controls="sidebarApexcharts" data-key="t-apexcharts"> Apexcharts
+                                        </a>
+                                        <div class="collapse menu-dropdown" id="sidebarApexcharts">
+                                            <ul class="nav nav-sm flex-column">
+                                                <li class="nav-item">
+                                                    <a href="/components/apexcharts/charts-apex-line" class="nav-link" data-key="t-line"> Line </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/components/apexcharts/charts-apex-area" class="nav-link" data-key="t-area"> Area </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/components/apexcharts/charts-apex-column" class="nav-link" data-key="t-column"> Column </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="/components/apexcharts/charts-apex-bar" class="nav-link" data-key="t-bar"> Bar </a>
+                                                </li>
+                                                
+                                                <li class="nav-item">
+                                                    <a href="/components/apexcharts/charts-apex-candlestick" class="nav-link" data-key="t-candlstick"> Candlstick </a>
+                                                </li>
+                                                
+                                                <li class="nav-item">
+                                                    <a href="/components/apexcharts/charts-apex-treemap" class="nav-link" data-key="t-treemap"> Treemap </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/components/charts-chartjs" class="nav-link" data-key="t-chartjs"> Chartjs </a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarMaps" data-bs-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="sidebarMaps">
+                                <i class="ri-map-pin-line"></i> <span data-key="t-maps">Maps</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarMaps">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="/components/maps/maps-google" class="nav-link" data-key="t-google">
+                                            Google
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/components/maps/maps-vector" class="nav-link" data-key="t-vector">
+                                            Vector
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/components/maps/maps-leaflet" class="nav-link" data-key="t-leaflet">
+                                            Leaflet
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+{% endblock sidebar %}
+    
