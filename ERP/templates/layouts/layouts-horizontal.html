@@ -4,7 +4,7 @@
 
 {% block extra_css %}
     <!-- plugin css -->
-    <link href="{{url_for('static' ,filename='libs/jsvectormap/dist/css/jsvectormap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url_for('static' ,filename='libs/jsvectormap/css/jsvectormap.min.css')}}" rel="stylesheet" type="text/css" />
 {% endblock extra_css %}
 {% block content %}
         <!-- ============================================================== -->
@@ -593,11 +593,11 @@
 
 {% block extra_js %}
     <!-- apexcharts -->
-    <script src="{{url_for('static' ,filename='libs/apexcharts/dist/apexcharts.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/apexcharts/apexcharts.min.js')}}"></script>
 
     <!-- Vector map-->
-    <script src="{{url_for('static' ,filename='libs/jsvectormap/dist/js/jsvectormap.min.js')}}"></script>
-    <script src="{{url_for('static' ,filename='libs/jsvectormap/dist/maps/world-merc.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/jsvectormap/js/jsvectormap.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/jsvectormap/maps/world-merc.js')}}"></script>
 
     <!-- Dashboard init -->
     <script  src="{{url_for('static' ,filename='js/pages/dashboard-analytics.init.js')}}"></script>

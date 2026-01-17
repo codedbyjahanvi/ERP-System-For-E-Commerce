@@ -2,7 +2,7 @@
 {% block title %}Create Product{% endblock title %}
 {% block extra_css %}
     <!-- Plugins css -->
-    <link href="{{url_for('static' ,filename='libs/dropzone/dist/dropzone.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{url_for('static' ,filename='libs/dropzone/dropzone.css')}}" rel="stylesheet" type="text/css" />
 {% endblock extra_css %}
 {% block content %}
             <!-- ============================================================== -->
@@ -360,7 +360,7 @@
     <script src="{{url_for('static' ,filename='libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js')}}"></script>
 
     <!-- dropzone js -->
-    <script src="{{url_for('static' ,filename='libs/dropzone/dist/dropzone-min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/dropzone/dropzone-min.js')}}"></script>
 
     <script src="{{url_for('static' ,filename='js/pages/ecommerce-product-create.init.js')}}"></script>
 {% endblock extra_js %}

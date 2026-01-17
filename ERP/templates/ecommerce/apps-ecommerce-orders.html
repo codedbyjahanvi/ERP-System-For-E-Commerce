@@ -2,7 +2,7 @@
 {% block title %}Orders{% endblock title %}
 {% block extra_css %}
 <!-- Sweet Alert css-->
-<link href="{{url_for('static' ,filename='libs/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{url_for('static' ,filename='libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
 {% endblock extra_css %}
 {% block content %}
             <!-- ============================================================== -->
@@ -160,7 +160,7 @@
                                                                 <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                                             </div>
                                                         </th>
-                                                        <td class="id"><a href="/apps/ecommerce/order_details" class="fw-medium link-primary">#VZ2101</a></td>
+                                                        <td class="id"><a href="/ecommerce/order_details" class="fw-medium link-primary">#VZ2101</a></td>
                                                         <td class="customer_name">Frank Hook</td>
                                                         <td class="product_name">Puma Tshirt</td>
                                                         <td class="date">20 Dec, 2021, <small class="text-muted">02:21 AM</small></td>
@@ -171,7 +171,7 @@
                                                         <td>
                                                             <ul class="list-inline hstack gap-2 mb-0">
                                                                 <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
-                                                                    <a href="/apps/ecommerce/order_details" class="text-primary d-inline-block">
+                                                                    <a href="/ecommerce/order_details" class="text-primary d-inline-block">
                                                                         <i class="ri-eye-fill fs-16"></i>
                                                                     </a>
                                                                 </li>
@@ -340,14 +340,14 @@
 {% endblock content %}
 {% block extra_js %}
     <!-- list.js min js -->
-    <script src="{{url_for('static' ,filename='libs/list.js/dist/list.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/list.js/list.min.js')}}"></script>
 
     <!--list pagination js-->
-    <script src="{{url_for('static' ,filename='libs/list.pagination.js/dist/list.pagination.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/list.pagination.js/list.pagination.min.js')}}"></script>
 
     <!-- ecommerce-order init js -->
     <script src="{{url_for('static' ,filename='js/pages/ecommerce-order.init.js')}}"></script>
 
     <!-- Sweet Alerts js -->
-    <script src="{{url_for('static' ,filename='libs/sweetalert2/dist/sweetalert2.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/sweetalert2/sweetalert2.min.js')}}"></script>
 {% endblock extra_js %}

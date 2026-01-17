@@ -10,11 +10,11 @@ account = Blueprint('account',__name__,template_folder='templates',
     
 #Actual Auth pages(working)  
 #Actual Auth pages(working)  
-@account.route('/login')  
+@account.route('/account/login')  
 def login():
     return render_template('account/login.html')
 
-@account.route('/login',methods=['POST'])  
+@account.route('/account/login',methods=['GET','POST'])  
 def login_post():
     if request.method == 'POST':
         email = request.form.get('email') 
@@ -30,11 +30,11 @@ def login_post():
         login_user(user, remember=remember)
         return redirect(url_for('dashboards.index'))
 
-@account.route('/signup')  
+@account.route('/account/signup')  
 def signup(): 
     return render_template('account/signup.html')
 
-@account.route('/signup',methods=['POST'])  
+@account.route('/account/signup',methods=['POST'])  
 def signup_post():
     email = request.form.get('email') 
     username = request.form.get('username')
@@ -50,7 +50,7 @@ def signup_post():
         flash("Username already Exists")
         return redirect(url_for('account.signup'))
 
-    new_user = users(email=email,username=username,password=generate_password_hash(password,method="sha256"))
+    new_user = users(email=email,username=username,password=generate_password_hash(password))
     db.session.add(new_user)
     db.session.commit()
 

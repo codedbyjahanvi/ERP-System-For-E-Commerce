@@ -2,10 +2,10 @@
 {% block title %}Products{% endblock title %}
 {% block extra_css %}
     <!-- nouisliderribute css -->
-    <link rel="stylesheet" href="{{url_for('static' ,filename='libs/nouislider/dist/nouislider.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' ,filename='libs/nouislider/nouislider.min.css')}}">
 
     <!-- gridjs css -->
-    <link rel="stylesheet" href="{{url_for('static' ,filename='libs/gridjs/dist/theme/mermaid.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static' ,filename='libs/gridjs/theme/mermaid.min.css')}}">
 {% endblock extra_css %}
 {% block content %}
         
@@ -307,7 +307,7 @@
                                     <div class="row g-4">
                                         <div class="col-sm-auto">
                                             <div>
-                                                <a href="/apps/ecommerce/add_product" class="btn btn-success" id="addproduct-btn"><i class="ri-add-line align-bottom me-1"></i> Add Product</a>
+                                                <a href="/ecommerce/add_product" class="btn btn-success" id="addproduct-btn"><i class="ri-add-line align-bottom me-1"></i> Add Product</a>
                                             </div>
                                         </div>
                                         <div class="col-sm">
@@ -426,12 +426,12 @@
     
 {% block extra_js %}
     <!-- nouisliderribute js -->
-    <script src="{{url_for('static' ,filename='libs/nouislider/dist/nouislider.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/nouislider/nouislider.min.js')}}"></script>
     <script src="{{url_for('static' ,filename='libs/wnumb/wNumb.min.js')}}"></script>
 
     <!-- gridjs js -->
-    <script src="{{url_for('static' ,filename='libs/gridjs/dist/gridjs.umd.js')}}"></script>
-    <script src="https://unpkg.com/gridjs/plugins/selection/dist/selection.umd.js"></script>
+    <script src="{{url_for('static' ,filename='libs/gridjs/gridjs.umd.js')}}"></script>
+    <script src="https://unpkg.com/gridjs/plugins/selection/selection.umd.js"></script>
     <!-- ecommerce product list -->
     <script src="{{url_for('static' ,filename='js/pages/ecommerce-product-list.init.js')}}"></script>
 {% endblock extra_js %}

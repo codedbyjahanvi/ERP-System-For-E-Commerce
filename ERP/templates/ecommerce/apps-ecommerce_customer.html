@@ -2,7 +2,7 @@
 {% block title %}Customers{% endblock title %}
 {% block extra_css %}
 <!-- Sweet Alert css-->
-<link href="{{url_for('static' ,filename='libs/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{url_for('static' ,filename='libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
 {% endblock extra_css %}
 {% block content %}
             <!-- ============================================================== -->
@@ -269,11 +269,11 @@
 {% endblock content %}
 {% block extra_js %}
     <!-- list.js min js -->
-    <script src="{{url_for('static' ,filename='libs/list.js/dist/list.min.js')}}"></script>
-    <script src="{{url_for('static' ,filename='libs/list.pagination.js/dist/list.pagination.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/list.js/list.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/list.pagination.js/list.pagination.min.js')}}"></script>
 
     <!--ecommerce-customer init js -->
     <script src="{{url_for('static' ,filename='js/pages/ecommerce-customer-list.init.js')}}"></script>
     <!-- Sweet Alerts js -->
-    <script src="{{url_for('static' ,filename='libs/sweetalert2/dist/sweetalert2.min.js')}}"></script>
+    <script src="{{url_for('static' ,filename='libs/sweetalert2/sweetalert2.min.js')}}"></script>
 {% endblock extra_js %}

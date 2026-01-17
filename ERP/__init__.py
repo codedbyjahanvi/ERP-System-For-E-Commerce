@@ -10,7 +10,7 @@ def create_app():
     app.config['SECRET_KEY'] ='secret-key'
     #app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:dhruvi%402004@localhost:3306/flask_auth"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:jahanvi%402004@localhost:3306/erp_db"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     login_manager = LoginManager(app)
