@@ -14,7 +14,7 @@ account = Blueprint('account',__name__,template_folder='templates',
 def login():
     return render_template('account/login.html')
 
-@account.route('/account/login',methods=['GET','POST'])  
+@account.route('/account/login',methods=['POST'])  
 def login_post():
     if request.method == 'POST':
         email = request.form.get('email') 

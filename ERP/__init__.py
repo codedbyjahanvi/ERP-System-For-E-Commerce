@@ -10,7 +10,7 @@ def create_app():
     app.config['SECRET_KEY'] ='secret-key'
     #app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:jahanvi%402004@localhost:3306/erp_db"
+    app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://root:dhruvi%402004@localhost:3306/erp_db"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     login_manager = LoginManager(app)
@@ -32,11 +32,13 @@ def create_app():
     from .layouts import layouts    
     from .account import account
     from .components import components
+    from .products import products
 
     app.register_blueprint(dashboards ,url_prefix="/")
     app.register_blueprint(apps ,url_prefix="/")
     app.register_blueprint(layouts ,url_prefix="/")
     app.register_blueprint(account ,url_prefix="/")
     app.register_blueprint(components ,url_prefix="/")
+    app.register_blueprint(products ,url_prefix="/")
 
     return app  
