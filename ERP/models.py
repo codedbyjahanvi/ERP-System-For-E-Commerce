@@ -11,7 +11,7 @@ class users(db.Model, UserMixin):
     password = db.Column(db.String(255), nullable=False)
 
 
-class product(db.Model):
+class Product(db.Model):
     __tablename__ = "products"
 
     id = db.Column(db.Integer, primary_key=True)
